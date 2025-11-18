@@ -15,6 +15,7 @@ body{
     align-items: center;
     gap: 10px;
     padding: 10px;
+    width: 100%;
 }
 
 .navibar__s1{
@@ -23,6 +24,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 10px;
+    width: 20%;
 }
 
 .navibar__s2{
@@ -34,7 +36,7 @@ body{
     padding: 5px;
     border: solid black 1px;
     border-radius: 20px;
-    width: 50%;
+    width: 40%;
 }
 
 .navibar__s3{
@@ -43,6 +45,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 10px;
+    width: 40%;
 }
 
 .navibar__s1 h1{
@@ -219,6 +222,7 @@ body{
 
 .subscription__plans{
     display: flex;
+    width: 100%;
     justify-content: space-around;
     padding: 30px;
     gap: 30px;
@@ -230,6 +234,7 @@ body{
     border-radius: 10px;
     gap: 10px;
     padding: 40px;
+    width: 30%;
 }
 .subscription__plans__1 h2{
     text-align: left;
