@@ -53,6 +53,7 @@ body{
     border: solid black 1px;
     border-radius: 20px;
     width: 50%;
+    flex-grow: 1;
    
 }
 
@@ -68,7 +69,6 @@ body{
     justify-content: center;
     align-items: center;
     gap: 10px;
-    
 }
 
 .navibar__s3--{
@@ -87,16 +87,6 @@ body{
     top: 100%;
     display: none;
 }
-
-/* .navbar__s3--pop::before {
-    content: "";
-    position: absolute;
-    top: -50%;  
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background: transparent; 
-} */
 
 .navibar__s3--:hover .navibar__s3--pop{
     display: inline-block;
@@ -132,6 +122,9 @@ body{
     color: white;
     text-decoration: none;
 }
+.navibar__s4{
+    display: none;
+}
 
 .sales{
     margin-top: solid #A435F0 1px ;
@@ -143,7 +136,7 @@ body{
     border: solid black 1px;
     background-color: beige;
     padding: 20px;
-    width: fit-content;
+    width: 40%;
     position: absolute;
     top: 50px;
     left: 50px;
@@ -151,18 +144,19 @@ body{
     animation-duration: 2s;
     opacity: 0;
     animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes drop{
     0%{
         opacity:0;
-        top: 0px;
-        left: 0px;
+        top: 0%;
+        left: 0%;
     }
     100%{
         opacity:1;
-        top: 50px;
-        left: 50px;
+        top: 10%;
+        left: 5%;
     }
 }
 
@@ -175,7 +169,6 @@ body{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: 20px;
     justify-content: center;
     
 }
@@ -209,7 +202,6 @@ body{
 }
 
 .skills{
-    margin-top: 10px;
     padding: 20px;
 }
 
@@ -227,8 +219,8 @@ body{
     border: solid black 1px;
     border-radius: 20px;
     padding: 10px;
-    flex-grow: 3;
-    flex-basis: 30%;
+    flex-grow: 1;
+    flex-basis: 25%;
     cursor: pointer;
 }
 .skills__box h3:hover{
@@ -240,7 +232,6 @@ body{
 }
 
 .course{
-    margin-top: 10px;
     padding: 20px;
 }
 
@@ -249,58 +240,27 @@ body{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: 20px;
     justify-content: space-around;
     
 
 }
-.course__list__1,.course__list__2,.course__list__3,.course__list__4,.course__list__5,.course__list__6,.course__list__7,.course__list__8{
-    width: 300px;
+.course__list__1{
+    flex-grow: 1;
+    flex-basis: 22%;
 }
 .course__list__1 img{
     width: 100%;
     height: 200px;
 }
-.course__list__2 img{
-    width: 100%;
-    height: 200px;
-}
-.course__list__3 img{
-    width: 100%;
-    height: 200px;
-}
-.course__list__4 img{
-    width: 100%;
-    height: 200px;
-}
-.course__list__5 img{
-    width: 100%;
-    height: 200px;
-}
-.course__list__6 img{
-    width: 100%;
-    height: 200px;
-}
-.course__list__7 img{
-    width: 100%;
-    height: 200px;
-}
-.course__list__8 img{
-    width: 100%;
-    height: 200px;
-}
 
 .subscription{
-    margin-top: 10px;
-    padding-top: 20px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .subscription__plans{
     display: flex;
-    width: 100%;
     justify-content: space-around;
-    padding: 30px;
+    padding: 20px;
     gap: 30px;
 
 }
@@ -333,9 +293,7 @@ body{
 }
 
 .footer{
-    margin-top: 10px;
     padding: 20px;
-    padding-top: 30px;
     background-color: #202230;
     color: white;
     display: flex;
@@ -352,6 +310,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 20%;
 
 }
 
@@ -376,3 +335,56 @@ body{
     align-items: center;
 }
 
+/* media queries */
+
+@media screen and (max-width:530px) {
+    body{
+        font-size: 10px;
+    }
+    .navibar__s3{
+        display: none;
+    }
+    .navibar__s4{
+        display: inline-block;
+        position: relative;
+    }
+    .navibar__s4__details{
+        background-color: white;
+        border: solid black 1px;
+        position: absolute;
+        right: 0px;
+        padding: 10px;
+        gap: 15px;
+        border-radius: 2px;
+        display: none;
+    }
+    .navibar__s4__details a{
+        text-decoration: none;
+        color: black;
+    }
+    .navibar__s4 i{
+        cursor: pointer;
+    }
+
+     .navibar__s4:hover .navibar__s4__details{
+        display: block;
+    }
+    
+    .sales__offer{
+        font-size: 5px;
+    }
+    .course__list__1{
+        flex-basis: 40%;
+        flex-grow: 1;
+    }
+    .subscription__plans{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .subscription__plans__1{
+        flex-grow: 1;
+        flex-basis: 70%;
+    }
+
+
+}
