@@ -9,13 +9,16 @@ body{
     font-family: "Vend Sans", sans-serif;
 }
 .navibar{
+    background-color: white;
     display: flex;
     flex-direction: row;
     justify-content:space-around;
     align-items: center;
     gap: 10px;
     padding: 10px;
-    width: 100%;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
 }
 
 .navibar__s1{
@@ -24,28 +27,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 10px;
-    width: 20%;
-}
-
-.navibar__s2{
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    gap: 10px;
-    padding: 5px;
-    border: solid black 1px;
-    border-radius: 20px;
-    width: 40%;
-}
-
-.navibar__s3{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    width: 40%;
+    
 }
 
 .navibar__s1 h1{
@@ -61,14 +43,77 @@ body{
     color: black;
 }
 
+.navibar__s2{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    border: solid black 1px;
+    border-radius: 20px;
+    width: 50%;
+   
+}
+
 .navibar__s2 input{
     padding: 5px;
     border: none;
-    
+    background: transparent; 
 }
+
 .navibar__s3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     
 }
+
+.navibar__s3--{
+    position: relative;
+}
+
+.navibar__s3--pop{
+    border: solid #6d28d2 1px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    background-color: white;
+    gap: 30px;
+    position: absolute;
+    right: 0px;
+    top: 100%;
+    display: none;
+}
+
+/* .navbar__s3--pop::before {
+    content: "";
+    position: absolute;
+    top: -50%;  
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: transparent; 
+} */
+
+.navibar__s3--:hover .navibar__s3--pop{
+    display: inline-block;
+}
+
+.navibar__s3--pop a{
+    background-color: #6d28d2;
+    border: #6d28d2 solid 1px;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.navibar__s3--pop p{
+    padding-bottom: 10px;
+}
+
 .navibar__s3 a{
    text-decoration: none; 
    color: black;
@@ -89,17 +134,21 @@ body{
 }
 
 .sales{
-    display: flex;
-    justify-content: center;
     margin-top: solid #A435F0 1px ;
     margin-bottom: solid #A435F0 1px ;
-    
+    position: relative;
 }
 
-.sales{
-    display: flex;
-    justify-content: center;
+.sales__offer{
+    border: solid black 1px;
+    background-color: beige;
+    padding: 20px;
+    width: fit-content;
+    position: absolute;
+    top: 50px;
+    left: 50px;
 }
+
 .sales img{
     width: 100%;
 }
@@ -217,7 +266,8 @@ body{
 
 .subscription{
     margin-top: 10px;
-    padding: 20px
+    padding-top: 20px;
+    padding: 10px;
 }
 
 .subscription__plans{
